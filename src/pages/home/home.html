@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title style="text-align: center;font-size:1.0em;">
+      <ng-container *ngIf="info">
+        <span>
+          {{info.username}}
+        </span>
+      </ng-container>
+    </ion-title>
+    <ion-buttons left>
+      <button ion-button icon-left>
+        <ion-icon name="menu"></ion-icon>
+        Home
+      </button>
+    </ion-buttons>
+    <ion-buttons right>
+      <button ion-button icon-left (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid style="padding:0;">
+      <ion-row>
+        <ion-col col-4 style="text-align: center;">
+          <p style="margin-bottom:1px;">Amount Due</p>
+          <h6 style="margin-top:5px;color:navy;">RM 61.70</h6>
+        </ion-col>
+        <ion-col col-4 style="text-align: center;">
+          <p style="margin-bottom:1px;">Bill Date</p>
+          <h6 style="margin-top:5px;color:navy;">07 Aug 2017</h6>
+        </ion-col>
+        <ion-col col-4 style="text-align: center;">
+          <p style="margin-bottom:1px;">Due Date</p>
+          <h6 style="margin-top:5px;color:navy;">06 Sep 2017</h6>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6 style="text-align: right;">
+          <button ion-button block color="nvy">PAY</button>
+        </ion-col>
+        <ion-col col-6 style="text-align:left">
+            <button ion-button block color="nvy">VIEW</button>
+        </ion-col>
+      </ion-row>
+      <ion-row style="background-color:#488aff;margin-top:20px;padding:10px;">
+        <ion-col col-6 >
+            <div style="color:white;font-size:1.2em;padding-left:10px;">Usage Summary</div>
+        </ion-col>
+        <ion-col col-6 color="primary">
+            <div style="color:white;font-size:1.2em;">es 4G LTE Postpaid</div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12 style="padding:0;">
+            <div>
+                <img src="assets/image/chart.png" style="width:100%;height:470px;"/>
+            </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>

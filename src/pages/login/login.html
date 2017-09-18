@@ -1,0 +1,68 @@
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<ion-content padding>
+  <div style="text-align: center;margin-top:50px;margin-bottom:30px;">
+      <img src="assets/image/yes_logo.gif"/>
+  </div>
+  <ion-list>
+      
+        <ion-item>
+          <ion-label>Username</ion-label>
+          <ion-input type="text"  [(ngModel)]="loginData.username"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Password</ion-label>
+          <ion-input type="password" [(ngModel)]="loginData.password"></ion-input>
+        </ion-item>
+      
+      </ion-list>
+      
+      <div padding>
+          <ion-grid>
+              <ion-row>
+                  <ion-col col-12>
+                    <button block ion-button color="light" (click)="login()">LOG IN</button>
+                  </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-6>
+                    <button icon-left block ion-button (click)="facebook()">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        &nbsp;&nbsp;&nbsp;Facebook
+                    </button>
+                </ion-col>
+                <!-- <ion-col col-4>
+                    <button block ion-button color="secondary">Twitter</button>
+                </ion-col> -->
+                <ion-col col-6>
+                    <button block ion-button color="danger" (click)="google()">
+                        <ion-icon name="logo-googleplus"></ion-icon>
+                      &nbsp;&nbsp;&nbsp;Google
+                    </button>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <span style="text-align: center;margin-top:20px;">
+                  By logging in, you agree to all 
+                  <a href="#" >terms & conditions</a>
+                  and 
+                  <a href="#">privacy policy</a>
+                </span>
+              </ion-row>
+              <ion-row>
+                <ion-col col-8 offset-2>
+                    <button style="margin-top:30px;" block ion-button color="orng">Express Reload</button>
+                </ion-col>
+              </ion-row>
+          </ion-grid>
+      </div>
+  </ion-content>
+  
